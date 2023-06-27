@@ -34,11 +34,27 @@ const formulas = [
                     return inputs['Number 1'] / inputs['Number 2'];
                 }
             },
+            {
+                name: 'Exponential',
+                inputs: ['Base', 'Exponent'],
+                description: 'Exponential calculations of any number you need calculated for example 2 powered by 2 is 4.',
+                calculate: (inputs) => {
+                    return inputs['Base'] ** inputs['Exponent'];
+                }
+            }
         ],
     },
     {
         type: 'Financial',
         formulas: [
+            {
+                name: 'Debt to income ratio',
+                inputs: ['Total monthly payments','Gross monthly income'],
+                description: 'Calculations on debt to income ratio. If you get a ratio of 50%.',
+                calculate: (inputs) => {
+                    return (inputs['Total monthly payments'] / inputs['Gross monthly income']) * 100;
+                }
+            },
             {
                 name: 'Compound Interest',
                 inputs: ['Principal Amount', 'Rate of Interest', 'Time'],
