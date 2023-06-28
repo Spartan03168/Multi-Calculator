@@ -1,4 +1,5 @@
 // Calculator.js
+import styles from '../styles/Calculator.module.css';
 
 import React, { useState } from 'react';
 import CategoryTabs from './CategoryTabs';
@@ -24,10 +25,10 @@ function Calculator() {
 
     return (
         <Container fluid>
-            <Row>
+            <Row className = {styles.header}>
                 <Col xs={12}><h1>Multi-Purpose Calculator</h1></Col>
             </Row>
-            <Row>
+            <Row className = {styles.calculatorBody}>
                 <Col xs={3}>
                     <CategoryTabs categories={formulas} selectCategory={selectCategory} activeTab={activeTab} />
                 </Col>

@@ -5,6 +5,14 @@
     background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 
+.header {
+    background-image: url("../Images/Geotrmtric.jpg");
+}
+
+body {
+    background-image: url("../Images/Geotrmtric.jpg")
+}
+
 .category {
     border-right: 1px solid #ddd;
     height: 100%;
@@ -38,7 +46,7 @@
 h1 {
     padding: 20px;
     font-size: 28px;
-    color: #333333;
+    color: black;
     border-bottom: 1px solid #ddd;
 }
 

@@ -56,6 +56,19 @@ const formulas = [
                 }
             },
             {
+                name: "Loan repayment calculations",
+                inputs: ["Principal", "Annual interest rates", "Loan term in months"],
+                description: "Assists you in deciding how much of your loan to pay back every month to meet your goal.",
+                calculate: (inputs) => {
+                    const principal = inputs["Principal"];
+                    const annualInterestRate = inputs["Annual interest rates"];
+                    const loanTermInMonths = inputs["Loan term in months"];
+                    const monthlyInterestRate = (annualInterestRate / 12) / 100;
+                    const loanRepayment = (principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, loanTermInMonths)) / (Math.pow(1 + monthlyInterestRate, loanTermInMonths) - 1);
+                    return loanRepayment.toFixed(2);
+                }
+            },
+            {
                 name: 'Compound Interest',
                 inputs: ['Principal Amount', 'Rate of Interest', 'Time'],
                 description: 'Compound interest is calculated by multiplying the initial principal amount by one plus the annual interest rate raised to the number of compound periods minus one. The formula is P (1 + r/n)^(nt).',
@@ -112,8 +125,35 @@ const formulas = [
                 calculate: (inputs) => {
                     return inputs['m'] * 3.28084;
                 }
+            },
+            {
+                name: "Feet to meter",
+                inputs: ["Feet"],
+                calculate: (inputs) => {
+                    return inputs["Feet"]/3.28084;
+                }
+            },
+            {
+                name: "Kilometers to miles",
+                inputs: ["Kilometers"],
+                calculate: (inputs) => {
+                    return inputs["Kilometers"] * 0.621371;
+                }
+            },
+            {
+                name: "Celcius to Fahrenherit",
+                inputs: ["Celcius"],
+                calculate: (inputs) => {
+                    return (inputs["Celcius"]*9/5) + 32;
+                }
+            },
+            {
+                name: "Fahrenheit to celcius",
+                inputs: ["Fahrenheit"],
+                calculate: (inputs) => {
+                    return (inputs["Fahrenheit"]-32) * 5/9;
+                }
             }
-
         ],
     }
 ];
