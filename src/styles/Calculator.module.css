@@ -53,7 +53,8 @@ h1 {
 
 .formula {
     padding: 20px;
-    background-color: #ffffff;
+    background-image: url("../Images/Geometric_rock.jpg");
+    color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -108,13 +109,13 @@ label {
 .descriptionText {
     font-size: 16px;
     margin-top: 10px;
-    color: #666666;
+    color: white;
 }
 
 
 
 .dropdown {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 10px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.7);

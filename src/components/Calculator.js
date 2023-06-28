@@ -35,7 +35,7 @@ function Calculator() {
                 <Col xs={9}>
                     {selectedCategory && (
                         <div>
-                            <select
+                            <select className = {styles.dropdown}
                                 value={selectedFormula ? selectedCategory.formulas.indexOf(selectedFormula) : ''}
                                 onChange={(e) =>
                                     selectFormula(selectedCategory.formulas[e.target.value])
